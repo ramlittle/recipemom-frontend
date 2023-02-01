@@ -1,0 +1,18 @@
+form{
+    margin:10px;
+}
+form label{
+    font-weight: bold;
+}
+form input{
+    padding:5px;
+}
+form button{
+    padding:5px;
+    background-color: dodgerblue;
+    color:white;
+}
+form button:hover{
+    background-color:white;
+    color:dodgerblue;
+}

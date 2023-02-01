@@ -1,0 +1,56 @@
+.login-page-container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+.image-container{
+    display:flex;
+    flex-direction:row;
+    width:60%;
+}
+.image-container > img{
+    width:100%;
+}
+.form-container{
+    display:flex;
+    flex-direction:column;
+    width:40%;
+    padding: 20px;
+}
+form  label,
+form  input{
+    padding:10px;
+    margin:5px;
+}
+.no-account-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.one{
+    text-align:center;
+}
+.two{
+    display:flex;
+    width: 100%;
+    flex-direction:row;
+    justify-content: center;
+}
+.two div{
+    padding:10px;
+}
+.links{
+    padding:10px;
+    background-color: dodgerblue;
+    color:white;
+    font-size:xx-small;
+    text-decoration:none;
+}
+.links:hover,
+form button:hover{
+    background-color: goldenrod;
+    color:white;
+}
+.error-message{
+    color:red;
+}

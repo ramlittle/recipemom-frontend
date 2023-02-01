@@ -1,0 +1,113 @@
+.viewed-recipe-container{
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+}
+.head{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container{
+    height: 200px;
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.head > div{
+    margin:10px;
+}
+.return-link{
+    color:white;
+    background-color:goldenrod;
+}
+.return-link:hover{
+    background-color: dodgerblue;
+    color:white;
+}
+/* colors */
+.color-green{
+    background-color: green;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+.color-yellow{
+    background-color: yellow;
+    color: black;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+.color-violet{
+    background-color: violet;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+.color-orange{
+    background-color: orange;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+.color-goldenrod{
+    background-color: goldenrod;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+.color-dodgerblue{
+    background-color: dodgerblue;
+    color: white;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px;
+}
+
+.body{
+    background-color: cornsilk;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+}
+.body > h3{
+    text-align:center;
+}
+.body h6{
+    font-size: large;
+    
+}
+/* INGREDIENTS */
+.ingredient-image{
+    border-radius:50%;
+    width: 100px;
+    height:100px;
+    margin-right:100px;
+    margin-left: 200px;
+}
+
+.add-to-favorites-btn{
+    background-color:maroon;
+    padding: 20px;
+    color: white;
+    border-radius: 50%;
+}
+.add-to-favorites-btn:hover{
+    background-color:green;
+}
+
+.remove-from-favorites-btn{
+    background-color:maroon;
+    padding: 20px;
+    color: white;
+    border-radius: 50%;
+}
+.remove-from-favorites-btn:hover{
+    background-color:red;
+}

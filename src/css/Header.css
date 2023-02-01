@@ -1,0 +1,28 @@
+header{
+    height:10vh;
+    background-color: dodgerblue;    
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color:white;
+}
+header a{
+    color:white;
+}
+.user-login-details img{
+    border-radius: 50%;
+}
+.user-login-details a,
+.user-login-and-signup a{
+    background-color:goldenrod;
+    color:white;
+    padding:5px;
+    text-decoration: none;
+    margin:5px;
+    border-radius:5px;
+}
+.user-login-details a:hover,
+.user-login-and-signup a:hover{
+    background-color: black;
+    color: white;
+}

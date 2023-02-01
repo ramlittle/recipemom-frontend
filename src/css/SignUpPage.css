@@ -1,0 +1,88 @@
+h2{
+    text-align:center;
+}
+
+.registration-container{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+}
+
+.registration-form-container{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    background-color:  black ;
+    color: white;
+    padding: 10px;
+}
+.register-form{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-buttons-container{
+    width: 100%;
+    text-align:center;
+}
+.clear-button,
+.submit-button{
+    width:20%;
+    background-color: goldenrod;
+    color:white;
+    padding:10px;
+    margin:5px;
+}
+.clear-button:hover,
+.submit-button:hover{
+    background-color:white;
+    color:black;
+}
+.field-container{
+    margin:10px;
+}
+.field-container:hover > input{
+    background-color: darkgrey;
+}
+.field-container > label{
+    width: 30%;
+}
+.field-container > input{
+    width: 70%;
+    text-align:left;
+    padding:10px;
+}
+.field-container{
+    display:flex;
+}
+
+.registration-picture-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:40%;
+    height: 100vh;
+}
+.registration-picture-container > img{
+    width: 450px;
+    height:400px;
+}
+.return-link{
+    padding:10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: goldenrod;
+    color:white;
+    font-size:medium;
+    margin:10px;
+}
+.return-link:hover{
+    background-color: black;
+}
+.error-message{
+    color:red;
+    text-align:center;
+    font-weight:bold;
+    padding:10px;
+}

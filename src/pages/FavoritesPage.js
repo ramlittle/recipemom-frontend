@@ -27,7 +27,7 @@ const FavoritesPage =()=>{
     const dispatch = useDispatch();
     const fetchFavorites=()=>{
         axios
-          .get("http://localhost:8080/api/v1/favorites")
+          .get("https://recipemom-api.onrender.com/api/v1/favorites")
           .then((res) => {
             dispatch({
               type: "POPULATE_FAVORITES",

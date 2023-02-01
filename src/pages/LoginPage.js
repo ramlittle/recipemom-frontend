@@ -48,7 +48,7 @@ function LoginPage() {
         e.preventDefault();
         const configuration={
             method: 'post',
-            url: 'http://localhost:8080/api/v1/users/login',
+            url: 'https://recipemom-api.onrender.com/api/v1/users/login',
             data:{
                 email,
                 password

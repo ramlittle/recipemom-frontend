@@ -19,7 +19,7 @@ const FavoritesList =(props)=>{
         
         const confirmBox=window.confirm('WARNING: This will remove the recipe from your favorites');
         if(confirmBox===true){
-            axios.delete(`http://localhost:8080/api/v1/favorites/`)
+            axios.delete(`https://recipemom-api.onrender.com/api/v1/favorites/`)
             .then(res =>{
                 if( typeof res.data === 'object' ){
                     dispatch({

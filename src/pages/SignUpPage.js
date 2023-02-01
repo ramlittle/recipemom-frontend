@@ -27,7 +27,7 @@ const SignUpPage =()=> {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/v1/users")
+      .get("https://recipemom-api.onrender.com/api/v1/users")
       .then((res) => {
         //   setData(res.data);
         //dispatch the data into reducer
@@ -77,7 +77,7 @@ const SignUpPage =()=> {
         //proceed to add if no problems
         const configuration = {
             method: 'post',
-            url: 'http://localhost:8080/api/v1/users/signUp',
+            url: 'https://recipemom-api.onrender.com/api/v1/users/signUp',
             data: {
               firstName:firstName,
               lastName:lastName,

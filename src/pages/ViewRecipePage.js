@@ -22,6 +22,7 @@ const ViewRecipePage =()=>{
     const fetchFavorites=()=>{
         axios
           .get("https://recipemom-api.onrender.com/api/v1/favorites")
+        //   .get("http://localhost:8080/api/v1/favorites")
           .then((res) => {
             dispatch({
               type: "POPULATE_FAVORITES",
@@ -79,6 +80,7 @@ const ViewRecipePage =()=>{
         const configuration = {
             method: 'post',
             url: 'https://recipemom-api.onrender.com/api/v1/favorites/addFavorite',
+            // url: 'http://localhost:8080/api/v1/favorites/addFavorite',
             data: {
               userID:userLoggedIn,
               recipe:viewedRecipe,
@@ -121,6 +123,7 @@ const ViewRecipePage =()=>{
         const confirmBox=window.confirm('WARNING: This will be removed from your favorite list');
             if(confirmBox===true){
                 axios.delete(`https://recipemom-api.onrender.com/api/v1/favorites/${toDeleteId}`)
+                // axios.delete(`http://localhost:8080/api/v1/favorites/${toDeleteId}`)
                 .then(res =>{
                     if( typeof res.data === 'object' ){
                         dispatch({

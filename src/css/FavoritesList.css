@@ -1,0 +1,70 @@
+.favorite-container{
+    width: 40%;
+    height: auto;
+    border:1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 2px;
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+    margin:10px;
+    align-items: center;
+}
+.favorite-container label{
+    display:block;
+    text-align:center;
+}
+.link{
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.favorite-container > img{
+    border-radius: 50%;
+}
+.favorite-container > img:hover{
+    border-radius: 0px;
+    border:1px solid grey;
+}
+
+.color-green{
+    background-color:green;
+    color:white;
+    border-radius: 5px;
+    padding:2px;
+    margin:5px;
+}
+.color-blue{
+    background-color:blue;
+    color:white;
+    border-radius: 5px;
+    padding:2px;
+    margin:5px;
+}
+.color-red{
+    background-color:red;
+    color:white;
+    border-radius: 5px;
+    padding:2px;
+    margin:5px;
+}
+.color-brown{
+    background-color:brown;
+    color:white;
+    border-radius: 5px;
+    padding:2px;
+    margin:5px;
+}
+.view-btn{
+    background-color:dodgerblue;
+    color:white;
+    padding:5px;
+    text-decoration: none;
+    margin:5px;
+    border-radius:5px;
+}
+.view-btn:hover{
+    background-color:goldenrod;
+    color:white;
+}

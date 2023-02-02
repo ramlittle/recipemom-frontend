@@ -9,22 +9,21 @@ import '../css/General.css';
 import '../css/FavoritesList.css';
 
 
-const FavoritesList =(props)=>{
-    console.log('favorites list of user',props.favoriteRecipesOfUser);
-    console.log('ID favorite',props.favoritesOfUser)
+const Favoritesprops =(props)=>{
     //REMOVE FAVORITE
     const dispatch=useDispatch();
-
     const onRemove=()=>{
+        const confirmBox=window.confirm('WARNING: This will remove the favorite from your favorites');
         
-        const confirmBox=window.confirm('WARNING: This will remove the recipe from your favorites');
+        
         if(confirmBox===true){
-            axios.delete(`https://recipemom-api.onrender.com/api/v1/favorites/`)
+            axios.delete(`https://favoritemom-api.onrender.com/api/v1/favorites/${props.id}`)
+            // axios.delete(`http://localhost:8080/api/v1/favorites/${props.id}`)
             .then(res =>{
                 if( typeof res.data === 'object' ){
                     dispatch({
                         type:'DELETE_FAVORITE',
-                        // payload:{id}
+                        payload:{id:props.id}
                     })
                 }
                 //reload page after action is done
@@ -35,54 +34,46 @@ const FavoritesList =(props)=>{
 
     return(
         <>
-                                 
-            <div className = 'list-container'>
-                {
-                    props.favoriteRecipesOfUser.map(list => (
-                        <>
-                            <div className ='recipe-container'>
-                                
-                                <img src = {list.image}/>
-                                <h5>{list.label}</h5>
+            <div className ='favorite-container'>
+                                <img src = {props.image}/>
+                                <h5>{props.label}</h5>
+                              
                                 <div>
                                     <label><small className='color-green'>Source</small></label>
                                     <label>
-                                        <a href = {list.url}
+                                        <a href = {props.url}
                                             target='_blank'
                                             className='link'
-                                        >{list.source}</a>
+                                        >{props.source}</a>
                                     </label>
                                 </div>
                                 <div>
                                     <label><small className='color-blue'>Diet Labels</small></label>
                                     <label>
-                                        <small>{list.dietLabels}</small>
+                                        <small>{props.dietLabels}</small>
                                     </label>
                                 </div>
                                 <div>
                                     <label><small className='color-red'>Dish Type</small></label>
                                     <label>
-                                        <small>{list.dishType}</small>
+                                        <small>{props.dishType}</small>
                                     </label>
                                 </div>
                                 <div>
                                     <label><small className='color-brown'>Meal Type</small></label>
                                     <label>
-                                        <small>{list.mealType}</small>
+                                        <small>{props.mealType}</small>
                                     </label>
                                 </div>
-                                {/* <div>
-                                    <button 
-                                        className='action-buttons'
-                                        onClick={onRemove}
-                                        >REMOVE</button>
-                                </div> */}
+                                <div>
+                                <button 
+                                    className='action-buttons'
+                                    onClick={onRemove}
+                                    >DELETE</button>
+                                </div>
                             </div>
-                        </>
-                    ))
-                } 
-            </div> 
+              
         </>  
     )
 }
-export default FavoritesList;
+export default Favoritesprops;

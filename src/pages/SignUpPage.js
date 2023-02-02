@@ -5,7 +5,9 @@ import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 
 //CSS
+import '../css/General.css';
 import '../css/SignUpPage.css';
+import '../css/Media.css'
 
 //IMAGES
 import GreatChoice from '../images/greatchoice.gif';
@@ -28,6 +30,7 @@ const SignUpPage =()=> {
   useEffect(() => {
     axios
       .get("https://recipemom-api.onrender.com/api/v1/users")
+      // .get("http://localhost:8080/api/v1/users")
       .then((res) => {
         //   setData(res.data);
         //dispatch the data into reducer
@@ -78,6 +81,7 @@ const SignUpPage =()=> {
         const configuration = {
             method: 'post',
             url: 'https://recipemom-api.onrender.com/api/v1/users/signUp',
+            // url: 'http://localhost:8080/api/v1/users/signUp',
             data: {
               firstName:firstName,
               lastName:lastName,

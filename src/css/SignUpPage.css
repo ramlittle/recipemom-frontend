@@ -62,11 +62,9 @@ h2{
     align-items: center;
     justify-content: center;
     width:40%;
-    height: 100vh;
 }
 .registration-picture-container > img{
     width: 450px;
-    height:400px;
 }
 .return-link{
     padding:10px;

@@ -17,4 +17,20 @@
         width:80%;
         height:auto;
     }
+    /* SIGN UP PAGE */
+    .registration-container{
+        flex-direction: column;
+    }
+    /* LOGIN PAGE */
+    .login-page-container{
+        flex-direction: column;
+    }
+    .form-container{
+        order: 1;
+        width: 8%;  
+    }
+    .image-container{
+        order:2;
+        width:100%;
+    }
 }

@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import FavoritesList from '../components/FavoritesList';
 
 //CSS
+import '../css/General.css';
 import '../css/FavoritesPage.css';
 
 //IMAGES
@@ -28,6 +29,7 @@ const FavoritesPage =()=>{
     const fetchFavorites=()=>{
         axios
           .get("https://recipemom-api.onrender.com/api/v1/favorites")
+        //   .get("http://localhost:8080/api/v1/favorites")
           .then((res) => {
             dispatch({
               type: "POPULATE_FAVORITES",
@@ -48,28 +50,43 @@ const FavoritesPage =()=>{
     console.log('all faves',favorites)
     const favoritesOfUser = favorites.filter(favorite=>{
         if (userLoggedIn === favorite.userID){
-            return favorite.recipe;
+            return favorite;
         }
     })
+    
+    
     const favoriteRecipesOfUser=favoritesOfUser.map(favorite=>{
         return favorite.recipe;
     })
-    console.log("favoritesOfUser", favoriteRecipesOfUser)
+    // console.log("favoritesOfUser", favoriteRecipesOfUser)
+    console.log("favoritesOfUser", favoritesOfUser)
     return(
         <>
             <Header/>
                 <div className='favorites-page-container'>
-                    <div className = 'favorites-list-container'>
-                    <FavoritesList 
-                        favoriteRecipesOfUser={favoriteRecipesOfUser}
-                        favoritesOfUser={favoritesOfUser}
-                    />
-                    </div>
                     <div className='favorites-image-container'>
                         <h4>Showing {favoriteRecipesOfUser.length} Favorite Recipes</h4>
                         <img src={Favorites}/>
 
                     </div>
+                    <div className = 'favorites-list-container'>
+                  
+                     { favoritesOfUser.map(list=>{
+                        return <FavoritesList  
+                            key={list._id}
+                            id={list._id}
+                            image={list.recipe.image}
+                            label={list.recipe.label}
+                            url={list.recipe.url}
+                            source={list.source}
+                            dietLabels={list.recipe.dietLabels}
+                            dishType={list.recipe.dishType}
+                            mealType={list.recipe.mealType}
+                        />})
+                    }
+
+                    </div>
+                    
                 </div>
 
             <Footer/>

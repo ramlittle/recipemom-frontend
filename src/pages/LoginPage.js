@@ -12,6 +12,7 @@ import GoogleAuthLogout from '../components/GoogleAuthLogout.js';
 //CSS
 import '../css/General.css';
 import '../css/LoginPage.css';
+import '../css/Media.css';
 
 //IMAGES
 import LoginImage from '../images/loginimage.png';
@@ -49,6 +50,7 @@ function LoginPage() {
         const configuration={
             method: 'post',
             url: 'https://recipemom-api.onrender.com/api/v1/users/login',
+            // url: 'http://localhost:8080/api/v1/users/login',
             data:{
                 email,
                 password

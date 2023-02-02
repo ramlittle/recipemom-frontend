@@ -4,6 +4,11 @@
         flex-direction:column;
         height:auto;
     }
+    .user-login-details small,
+    .user-login-details strong,
+    .header-anchor{
+        display:none;
+    }
     /* RECIPE LIST */
     .list-container{
         flex-direction:column;

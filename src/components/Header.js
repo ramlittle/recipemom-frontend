@@ -38,11 +38,11 @@ const Header =()=>{
                 </div>
                 ):(
                 <div className='user-login-details'>
-                    <a href={userPicture} title='view image' target='_blank'>
+                    <a href={userPicture} title='view image' target='_blank' className='header-anchor'>
                         <img src={userPicture}/>
-                    </a> Welcome,
+                    </a> <small>Welcome,</small>
                     <strong> {userFirstName} {userLastName} </strong> 
-                    <a href={mailto} title='send email'> {userEmail} </a>
+                    <a href={mailto} title='send email' className='header-anchor'> {userEmail} </a>
                     <Link to ='/' title='go back to home page'>Home</Link>
                     <Link to ='/favoritesPage' title='see favorites'>My Favorites</Link>
                     <Logout/>

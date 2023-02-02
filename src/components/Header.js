@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 //CSS
 import '../css/General.css';
 import '../css/Header.css';
+import '../css/Media.css';
 //COMPONENTS
 import Logout from '../components/Logout.js';
 const Header =()=>{

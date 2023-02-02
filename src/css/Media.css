@@ -1,0 +1,15 @@
+@media screen and (max-width:767px){
+    /* HEADER */
+    header{
+        flex-direction:column;
+        height:auto;
+    }
+    /* RECIPE LIST */
+    .list-container{
+        flex-direction:column;
+    }
+    .recipe-container{
+        width:80%;
+        height:auto;
+    }
+}

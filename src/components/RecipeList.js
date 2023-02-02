@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 //CSS
 import '../css/General.css';
 import '../css/RecipeList.css';
-
+import '../css/Media.css';//media query
 
 const RecipeList =(props)=>{
     console.log('data from recipe list',props.currentRecords);

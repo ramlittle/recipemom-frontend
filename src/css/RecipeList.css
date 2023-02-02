@@ -13,6 +13,11 @@
     flex-direction:column;
     padding:10px;
     margin:10px;
+    align-items: center;
+}
+.recipe-container label{
+    display:block;
+    text-align:center;
 }
 .link{
     text-decoration: none;
